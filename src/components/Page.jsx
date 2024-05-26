@@ -64,20 +64,20 @@ const Page = () => {
 
                 <div className='flex flex-col justify-center items-center p-2'>
                     <div className='flex py-2 my-2'>
-                    <img src={logo} alt="logo" className='size-24' />
-                    <h1 className='text-center text-white font-bold text-5xl md:text-2xl text-pretty py-2 my-2'>YTScoop</h1>
+                    <img src={logo} alt="logo" className='md:size-24 size-16' />
+                    <h1 className='text-center text-white font-bold text-2xl md:text-5xl text-pretty py-2 my-2'>YTScoop</h1>
                     </div>
                 
                     
-                    <p className='text-center text-white p-1 m-1 text-2xl md:text-lg text-pretty'>YTScoop is a website to download YouTube Videos in mp4 or mp3 format for free.</p>
+                    <p className='text-center text-white p-1 m-1 text-lg md:text-2xl text-pretty'>YTScoop is a website to download YouTube Videos in mp4 or mp3 format for free.</p>
                     <p className='text-center text-pretty text-white p-1 text-lg'>(Just paste the URL of the YouTube video you want to download and click on the download button.)</p>
                 </div>
 
-                <div className='flex justify-center gap-5 m-8 md:m-2 md:gap-1'>
+                <div className='flex justify-center gap-1 m-2 md:m-8 md:gap-5'>
                     <input
                         placeholder='Paste the URL'
                         type="url"
-                        className='relative inline-flex items-center justify-center overflow-hidden font-medium group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full text-xl px-3 py-5 w-[50%] placeholder-gray-200 md:text-md'
+                        className='relative inline-flex items-center justify-center overflow-hidden font-medium group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full text-md px-3 py-5 w-[50%] placeholder-gray-200 md:text-xl'
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                     />
@@ -85,7 +85,7 @@ const Page = () => {
                     <select
                         value={format}
                         onChange={(e) => setFormat(e.target.value)}
-                        className="relative inline-flex items-center justify-center overflow-hidden font-medium group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full px-5 text-xl appearance-none"
+                        className="relative inline-flex items-center justify-center overflow-hidden font-medium group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full px-5 md:text-xl text-md appearance-none"
                     >
                         <option className='bg-black text-white' value="mp4">VIDEO-MP4</option>
                         <option className='bg-black text-white' value="mp3">AUDIO-MP3</option>
@@ -96,9 +96,9 @@ const Page = () => {
                     <button
                         onClick={handleDownload}
                         disabled={isDownloading}
-                        className='flex w-fit bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 hover:from-indigo-600 hover:via-pink-600 hover:to-red-600 focus:outline-none text-white text-2xl uppercase font-bold shadow-md mx-auto p-5 mb-2 rounded-3xl hover:rounded-xl transition-all ease-linear duration-100'
+                        className='flex w-fit bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 hover:from-indigo-600 hover:via-pink-600 hover:to-red-600 focus:outline-none text-white text-lg md:text-2xl uppercase font-bold shadow-md mx-auto p-5 mb-2 rounded-3xl hover:rounded-xl transition-all ease-linear duration-100'
                     >
-                        <div className="flex sm:flex-cols-12 gap-6">
+                        <div className="flex sm:flex-cols-12 md:gap-6 gap-3">
                             <div className="col-span-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
